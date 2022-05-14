@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: db_car_dev
+    # restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=car
+      - POSTGRES_PASSWORD=car
+      - POSTGRES_DB=car_dev
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
