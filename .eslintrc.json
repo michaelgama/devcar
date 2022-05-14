@@ -12,7 +12,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
   "plugins": [
@@ -56,7 +56,7 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          "/^@shared/",
+          "/^@/",
           [
             "parent",
             "sibling",
@@ -73,11 +73,17 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.js"
+          "*/.spec.js"
         ]
       }
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error"
+    ],
+    "indent": [
+      "error",
+      "space"
+    ]
   },
   "settings": {
     "import/resolver": {
