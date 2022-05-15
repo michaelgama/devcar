@@ -13,15 +13,9 @@ class CreateCarUseCase {
   ) { }
 
   async execute({ name, brand, description, price, user_id, phone }: ICreateCar) {
-    if (name === '' || brand === '' || price === '' || phone === '') {
-      throw new AppError('name, brand, price or phone missin.');
+    if (name === '' || brand === '' || price === '' || user_id === '' || phone === '') {
+      throw new AppError('name, brand, description, price, user_id or phone missin.');
     }
-
-    // const userAlreadyExists = await this.userRepository.findByEmail(email);
-
-    // if (userAlreadyExists) {
-    //   throw new AppError('User already exists.');
-    // }
 
     const newCar = Car.create({
       name,

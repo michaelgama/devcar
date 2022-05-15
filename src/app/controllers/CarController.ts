@@ -9,7 +9,7 @@ class CarController {
 
     const createCar = container.resolve(CreateCarUseCase);
 
-    await createCar.execute({
+    const Newcar = await createCar.execute({
       name,
       brand,
       description,
@@ -18,7 +18,7 @@ class CarController {
       phone,
     });
 
-    return res.status(201).send();
+    return res.status(201).json(Newcar);
   }
 }
 
