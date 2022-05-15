@@ -1,4 +1,4 @@
-import { prisma } from 'src/prisma';
+import { prisma } from '../../prisma';
 
 import { ICreateUser } from '../dtos/ICreateUser';
 import { User } from '../entities/User';

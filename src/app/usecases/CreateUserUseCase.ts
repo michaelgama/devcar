@@ -1,5 +1,5 @@
 import { hash } from 'bcrypt';
-import { AppError } from 'src/infra/errors/AppError';
+import { AppError } from '../../../src/infra/errors/AppError';
 import { inject, injectable } from 'tsyringe';
 
 import { ICreateUser } from '../dtos/ICreateUser';
