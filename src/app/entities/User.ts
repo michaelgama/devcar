@@ -5,7 +5,6 @@ class User {
   password: string;
 
   private constructor({ name, email, password }: User) {
-    // eslint-disable-next-line no-constructor-return
     return Object.assign(this, {
       name,
       email,
