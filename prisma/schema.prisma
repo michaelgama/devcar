@@ -17,5 +17,21 @@ model User {
   password   String
   created_at DateTime? @default(now())
 
+  cars Car[]
   @@map("users")
+}
+
+model Car {
+  id          String    @id @default(uuid())
+  name        String
+  brand       String
+  description String?
+  price       String
+  user_id     String
+  user        User      @relation(fields: [user_id], references: [id])
+  phone       String
+  created_at  DateTime? @default(now())
+  updated_at  DateTime? @default(now())
+
+  @@map("cars")
 }
